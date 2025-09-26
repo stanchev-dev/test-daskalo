@@ -3,11 +3,569 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Test App</title>
+  <title>Професионална гимназия „Акад. Светослав Иванов“</title>
+  <meta
+    name="description"
+    content="Официален сайт на професионалната гимназия „Акад. Светослав Иванов“ – новини, разписание, галерия, контакти и записване."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>Здрасти от Codex стартера</h1>
-  <script src="app.js"></script>
+  <a class="skip-link" href="#main">Прескочи към съдържанието</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-layout">
+      <a class="logo" href="#hero" aria-label="Начало">
+        <span class="logo-mark" aria-hidden="true">ПГ</span>
+        <span class="logo-text">ПГ „Акад. Светослав Иванов“</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-nav-toggle
+      >
+        <span class="nav-toggle__label">Меню</span>
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+      </button>
+      <nav class="main-nav" id="primary-navigation" data-nav>
+        <ul class="nav-list">
+          <li><a href="#about">За нас</a></li>
+          <li><a href="#news">Новини</a></li>
+          <li><a href="#schedule">Разписание</a></li>
+          <li><a href="#gallery">Галерия</a></li>
+          <li><a href="#enrollment">Записване</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <div>
+          <h1>Добре дошли в ПГ „Акад. Светослав Иванов“</h1>
+          <p>
+            Мястото, където знанието среща професионализма. Разгледайте нашите програми,
+            успехи и активен училищен живот.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#enrollment">Кандидатствай сега</a>
+            <a class="button" href="#news">Виж последните новини</a>
+          </div>
+        </div>
+        <form class="hero-search" role="search" aria-label="Търсене в сайта">
+          <label for="site-search" class="hero-search__label">Търсене</label>
+          <input
+            id="site-search"
+            type="search"
+            name="search"
+            placeholder="Търси в новини и FAQ"
+            data-site-search
+          />
+          <p class="hero-search__status" aria-live="polite" data-search-status>
+            Въведете дума за търсене.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>За гимназията</h2>
+          <p>
+            Професионалната гимназия „Акад. Светослав Иванов“ подготвя ученици по съвременни
+            STEM специалности, чуждоезикови програми и предприемачество. Нашата мисия е да
+            изградим увереност, компетентност и отговорност в бъдещите специалисти на
+            България.
+          </p>
+        </div>
+        <div class="highlights">
+          <article class="highlight">
+            <h3>Практическо обучение</h3>
+            <p>
+              Учениците работят в модерни лаборатории и компании партньори, за да приложат
+              наученото в реална среда.
+            </p>
+          </article>
+          <article class="highlight">
+            <h3>Ангажирана общност</h3>
+            <p>
+              Родители, преподаватели и бизнес организации изграждат подкрепяща среда с
+              менторство и кариерни консултации.
+            </p>
+          </article>
+          <article class="highlight">
+            <h3>Международни успехи</h3>
+            <p>
+              Нашите отбори печелят състезания по роботика, програмиране и електроника в
+              страната и чужбина.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="news">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>Новини и събития</h2>
+          <p>Следете какво се случва в училището – постижения, инициативи и важни дати.</p>
+        </div>
+        <div class="cards" data-search-group>
+          <article class="card" data-searchable>
+            <h3>Откриване на учебната 2025/2026 година</h3>
+            <p class="card__meta">Публикувано на 01.09.2025</p>
+            <p>
+              Поканваме всички ученици и родители на тържествено откриване на 15 септември от
+              10:00 ч. във вътрешния двор. Очакват ви демонстрации на клубовете и среща с
+              новите класни ръководители.
+            </p>
+            <a class="card__link" href="#">Прочети повече</a>
+          </article>
+          <article class="card" data-searchable>
+            <h3>Седмица на отворените врати за бъдещи ученици</h3>
+            <p class="card__meta">Публикувано на 25.10.2025</p>
+            <p>
+              Между 18 и 22 ноември организираме демонстрационни уроци, срещи с настоящи
+              ученици и турове из учебните работилници. Регистрирайте се чрез формата за
+              записване.
+            </p>
+            <a class="card__link" href="#">Виж програмата</a>
+          </article>
+          <article class="card" data-searchable>
+            <h3>Национален приз за „Иновации в образованието“</h3>
+            <p class="card__meta">Публикувано на 18.03.2025</p>
+            <p>
+              Гимназията бе отличена за интегрирането на проектно-базирано обучение и
+              партньорства с технологични компании. Благодарим на всички ученици и учители за
+              труда!
+            </p>
+            <a class="card__link" href="#">Виж подробности</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>Разписание на часовете</h2>
+          <p>
+            Разписанието е фиксирано по класове и се актуализира в началото на всяка учебна
+            година. Можете да го синхронизирате с личния си календар чрез Google Calendar.
+          </p>
+        </div>
+        <div class="schedule">
+          <div class="schedule__info">
+            <p>
+              <strong>Сутрешна смяна:</strong> 08:00 – 14:10<br />
+              <strong>Следобедна смяна:</strong> 13:30 – 19:40
+            </p>
+            <a class="button" href="#">Добави към Google Calendar</a>
+          </div>
+          <div class="schedule__table" role="region" aria-label="Разписание за 10А клас">
+            <table>
+              <caption>10А клас – профил „Компютърни науки“</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Час</th>
+                  <th scope="col">Понеделник</th>
+                  <th scope="col">Вторник</th>
+                  <th scope="col">Сряда</th>
+                  <th scope="col">Четвъртък</th>
+                  <th scope="col">Петък</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1<br /><span>08:00 – 08:45</span></th>
+                  <td>Математика</td>
+                  <td>Английски език</td>
+                  <td>Физика</td>
+                  <td>Информатика</td>
+                  <td>История</td>
+                </tr>
+                <tr>
+                  <th scope="row">2<br /><span>08:55 – 09:40</span></th>
+                  <td>Информатика</td>
+                  <td>Математика</td>
+                  <td>Час на класа</td>
+                  <td>География</td>
+                  <td>БЕЛ</td>
+                </tr>
+                <tr>
+                  <th scope="row">3<br /><span>09:50 – 10:35</span></th>
+                  <td>Програмиране</td>
+                  <td>Информатика</td>
+                  <td>Химия</td>
+                  <td>Математика</td>
+                  <td>Програмиране</td>
+                </tr>
+                <tr>
+                  <th scope="row">4<br /><span>10:45 – 11:30</span></th>
+                  <td>БЕЛ</td>
+                  <td>Електроника</td>
+                  <td>Спорт</td>
+                  <td>История</td>
+                  <td>Информатика</td>
+                </tr>
+                <tr>
+                  <th scope="row">5<br /><span>11:40 – 12:25</span></th>
+                  <td>Физика</td>
+                  <td>Проектно обучение</td>
+                  <td>Математика</td>
+                  <td>Инженерен дизайн</td>
+                  <td>Английски език</td>
+                </tr>
+                <tr>
+                  <th scope="row">6<br /><span>12:35 – 13:20</span></th>
+                  <td>Предприемачество</td>
+                  <td>Физика</td>
+                  <td>Програмиране</td>
+                  <td>БЕЛ</td>
+                  <td>Проектно обучение</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="gallery">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>Галерия</h2>
+          <p>Разгледайте моменти от училищния живот – събития, лаборатории и състезания.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item" data-searchable>
+            <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=600&q=60" alt="Ученици работят заедно по роботика" />
+            <figcaption>Клуб по роботика</figcaption>
+            <button
+              class="button button--ghost"
+              type="button"
+              data-lightbox-trigger
+              data-full="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80"
+              data-alt="Ученици програмират робот"
+              data-caption="Клуб по роботика – подготовка за национално състезание"
+            >
+              Разгледай
+            </button>
+          </figure>
+          <figure class="gallery-item" data-searchable>
+            <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=600&q=60" alt="Ученици в компютърен кабинет" />
+            <figcaption>Практически занятия</figcaption>
+            <button
+              class="button button--ghost"
+              type="button"
+              data-lightbox-trigger
+              data-full="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1400&q=80"
+              data-alt="Ученици в компютърен кабинет"
+              data-caption="Практическо занятие по уеб разработка"
+            >
+              Разгледай
+            </button>
+          </figure>
+          <figure class="gallery-item" data-searchable>
+            <img src="https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?auto=format&fit=crop&w=600&q=60" alt="Бъдещи ученици посетители" />
+            <figcaption>Ден на отворените врати</figcaption>
+            <button
+              class="button button--ghost"
+              type="button"
+              data-lightbox-trigger
+              data-full="https://images.unsplash.com/photo-1485322551133-3a4c27a9d925?auto=format&fit=crop&w=1400&q=80"
+              data-alt="Група посетители в училище"
+              data-caption="Бъдещи ученици разглеждат лабораториите"
+            >
+              Разгледай
+            </button>
+          </figure>
+          <figure class="gallery-item" data-searchable>
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=60" alt="Учител обяснява на ученици" />
+            <figcaption>Проектно обучение</figcaption>
+            <button
+              class="button button--ghost"
+              type="button"
+              data-lightbox-trigger
+              data-full="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
+              data-alt="Учител помага на ученици с проект"
+              data-caption="Проектно обучение по предприемачество"
+            >
+              Разгледай
+            </button>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enrollment">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>Записване и прием</h2>
+          <p>
+            Попълнете кратката кандидатура или се свържете с нашия екип за повече информация.
+            Формата е структурирана в три стъпки за по-голямо удобство.
+          </p>
+        </div>
+        <div class="enrollment">
+          <div class="enrollment__info">
+            <h3>Процедура</h3>
+            <ol>
+              <li>Попълнете онлайн формата с основни данни.</li>
+              <li>Прикачете документите в отговор на имейла за потвърждение.</li>
+              <li>Посетете ни за индивидуална среща и подписване на договор.</li>
+            </ol>
+            <p>
+              <strong>Алтернативни канали:</strong> <a href="tel:+35929990000">+359 2 999 00 00</a>
+              или <a href="mailto:admissions@pg-sivanov.bg">admissions@pg-sivanov.bg</a>.
+            </p>
+            <p>
+              <a class="button button--ghost" href="#faq">Вижте най-често задаваните въпроси</a>
+            </p>
+          </div>
+          <form
+            class="enrollment-form"
+            id="enrollment-form"
+            action="https://formspree.io/f/maylvbzg"
+            method="post"
+            novalidate
+          >
+            <div class="enrollment-form__steps" aria-live="polite" data-step-indicator>
+              Стъпка 1 от 3
+            </div>
+            <div class="form-step" data-form-step>
+              <h3>Лични данни на кандидата</h3>
+              <div class="form-group">
+                <label for="student-name">Име и фамилия *</label>
+                <input id="student-name" name="studentName" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="student-email">Имейл *</label>
+                <input id="student-email" name="studentEmail" type="email" required />
+              </div>
+              <div class="form-group">
+                <label for="student-phone">Телефон *</label>
+                <input id="student-phone" name="studentPhone" type="tel" required pattern="[0-9+\s-]{6,}" />
+              </div>
+              <div class="form-navigation">
+                <button class="button button--primary" type="button" data-next-step>
+                  Следваща стъпка
+                </button>
+              </div>
+            </div>
+            <div class="form-step" data-form-step hidden>
+              <h3>Предишно образование</h3>
+              <div class="form-group">
+                <label for="previous-school">Основно училище *</label>
+                <input id="previous-school" name="previousSchool" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="average-grade">Среден успех *</label>
+                <input id="average-grade" name="averageGrade" type="text" required pattern="^(6|[2-5](?:\.\d{1,2})?)$" />
+                <small class="form-hint">Пример: 5.45</small>
+              </div>
+              <div class="form-group">
+                <label for="preferred-program">Желана специалност *</label>
+                <select id="preferred-program" name="preferredProgram" required>
+                  <option value="">Изберете…</option>
+                  <option>Компютърни науки</option>
+                  <option>Електротехника</option>
+                  <option>Мехатроника</option>
+                  <option>Маркетинг и предприемачество</option>
+                </select>
+              </div>
+              <div class="form-navigation">
+                <button class="button" type="button" data-prev-step>Назад</button>
+                <button class="button button--primary" type="button" data-next-step>
+                  Следваща стъпка
+                </button>
+              </div>
+            </div>
+            <div class="form-step" data-form-step hidden>
+              <h3>Допълнителна информация</h3>
+              <div class="form-group">
+                <label for="guardian-name">Име на родител/настойник *</label>
+                <input id="guardian-name" name="guardianName" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-preference">Предпочитан канал за връзка *</label>
+                <select id="contact-preference" name="contactPreference" required>
+                  <option value="">Изберете…</option>
+                  <option>Телефон</option>
+                  <option>Имейл</option>
+                  <option>Среща на място</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="additional-notes">Допълнителни бележки</label>
+                <textarea id="additional-notes" name="additionalNotes" rows="4"></textarea>
+              </div>
+              <div class="form-navigation">
+                <button class="button" type="button" data-prev-step>Назад</button>
+                <button class="button button--primary" type="submit">Изпрати кандидатура</button>
+              </div>
+            </div>
+            <p class="form-note">
+              С изпращането на формата приемате <a href="#">политиката за поверителност</a> и
+              <a href="#">условията за ползване</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>Често задавани въпроси</h2>
+          <p>
+            Отговори на основните въпроси за приема, учебния процес и живота в гимназията.
+          </p>
+        </div>
+        <div class="faq" data-search-group>
+          <details class="faq-item" data-searchable>
+            <summary>Какви са сроковете за записване?</summary>
+            <p>
+              Приемаме кандидатури от 1 април до 30 юни. След попълване на формата ще получите
+              имейл с точния график за интервю и подаване на документи.
+            </p>
+          </details>
+          <details class="faq-item" data-searchable>
+            <summary>Необходим ли е приемен изпит?</summary>
+            <p>
+              Провеждаме мотивационно интервю и оценяваме входните резултати от НВО след 7 клас.
+              Не се изисква допълнителен писмен изпит.
+            </p>
+          </details>
+          <details class="faq-item" data-searchable>
+            <summary>Предлагате ли стипендии?</summary>
+            <p>
+              Да. Ученици с отличен успех и призови места в национални състезания получават
+              месечни стипендии, както и целеви средства за участия в международни форуми.
+            </p>
+          </details>
+          <details class="faq-item" data-searchable>
+            <summary>Как да се свържем с училищното настоятелство?</summary>
+            <p>
+              Настоятелството провежда приемни дни всеки първи вторник от месеца. Пишете на
+              <a href="mailto:board@pg-sivanov.bg">board@pg-sivanov.bg</a> за записване на
+              час или посетете секцията „Контакти“.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container section__inner">
+        <div class="section__header">
+          <h2>Контакти</h2>
+          <p>
+            Свържете се с нас чрез предпочитания от вас канал или ни посетете на място в
+            София.
+          </p>
+        </div>
+        <div class="contacts">
+          <div class="contacts__info">
+            <ul class="contact-list">
+              <li>
+                <span aria-hidden="true">📍</span>
+                <div>
+                  <strong>Адрес</strong>
+                  <p>ул. „Образование“ 15, 1000 София</p>
+                </div>
+              </li>
+              <li>
+                <span aria-hidden="true">☎️</span>
+                <div>
+                  <strong>Телефон</strong>
+                  <p><a href="tel:+35929990000">+359 2 999 00 00</a></p>
+                </div>
+              </li>
+              <li>
+                <span aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Имейл</strong>
+                  <p><a href="mailto:info@pg-sivanov.bg">info@pg-sivanov.bg</a></p>
+                </div>
+              </li>
+              <li>
+                <span aria-hidden="true">💬</span>
+                <div>
+                  <strong>Социални мрежи</strong>
+                  <p>
+                    <a href="#">Facebook</a> · <a href="#">Instagram</a> ·
+                    <a href="#">YouTube</a>
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <form class="contact-form" action="https://formspree.io/f/mnqeqnrd" method="post">
+              <h3>Изпратете ни съобщение</h3>
+              <div class="form-group">
+                <label for="contact-name">Име *</label>
+                <input id="contact-name" name="name" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Имейл *</label>
+                <input id="contact-email" name="email" type="email" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Съобщение *</label>
+                <textarea id="contact-message" name="message" rows="4" required></textarea>
+              </div>
+              <div class="form-group form-group--inline">
+                <label for="contact-preferred-time">Предпочитан час за връзка</label>
+                <input id="contact-preferred-time" name="preferredTime" type="time" />
+              </div>
+              <button class="button button--primary" type="submit">Изпрати</button>
+            </form>
+          </div>
+          <div class="contacts__map" aria-label="Карта на местоположението">
+            <iframe
+              title="ПГ Акад. Светослав Иванов на карта"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.1375195820413!2d23.319749576696682!3d42.69770817116495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85760cfb9291%3A0x4d75f1ef1a3040cc!2z0JrRgNCw0YHQvdGL0Lkg0JjQvdGC0YAg0KfQtdGA0LrQvtCy0LDQvdC40YfQsCDigJ7QmtGA0L7QsdC-0LAg0KHQvNCw0YLQtdGA0LAg0LLQtdGA0YLRgNC40LzQvSDQktC10YIg0KHQtdCy0LDQtdC60LAg0YjQuNC90YIu4oCc!5e0!3m2!1sbg!2sbg!4v1700000000000!5m2!1sbg!2sbg"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Професионална гимназия „Акад. Светослав Иванов“. Всички права запазени.</p>
+      <a class="footer-link" href="#top">Обратно нагоре</a>
+    </div>
+  </footer>
+
+  <div class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" data-lightbox>
+    <div class="lightbox__inner">
+      <button class="lightbox__close" type="button" aria-label="Затвори" data-close-lightbox>
+        ×
+      </button>
+      <figure>
+        <img src="" alt="" data-lightbox-image />
+        <figcaption data-lightbox-caption></figcaption>
+      </figure>
+    </div>
+  </div>
 </body>
 </html>
